@@ -6,12 +6,39 @@
     <title>Document</title>
 </head>
 <body>
+
     <p>Click here to change...</p>
+
     <button onclick= "clicked()" class = "js-button"> 
         Click 
     </button>
 
+    <p>Product shipping calculation</p>
+
+    <input placeholder="enter amount" class="js-button2">
+
+    <button onclick="
+    calculate()
+    ">Calculate</button>
+
+    <p class="final-result"></p>
+
+
     <script>
+
+        
+
+        function calculate(){
+            if (document.querySelector(".js-button2")
+                .value>50){
+            document.querySelector(".final-result").innerHTML = `${(document.querySelector(".js-button2")
+                .value)}`
+            }else{
+                const price = Number(document.querySelector(".js-button2").value)
+                document.querySelector(".final-result").innerHTML = `${price+10}`
+            }
+        }
+
         function clicked(){
             if (document.querySelector(".js-button").innerHTML === "Click"){
                 document.querySelector(".js-button").innerHTML = "Clicked"
@@ -20,5 +47,6 @@
             }
         }
     </script>
+
 </body>
 </html>
