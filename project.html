@@ -15,7 +15,8 @@
 
     <p>Product shipping calculation</p>
 
-    <input placeholder="enter amount" class="js-button2">
+    <input placeholder="enter amount" class="js-button2" onkeydown="
+    keyPress(event)">
 
     <button onclick="
     calculate()
@@ -26,7 +27,11 @@
 
     <script>
 
-        
+        function keyPress(event){
+            if (event.key == "Enter"){
+                calculate()
+            }
+        }
 
         function calculate(){
             if (document.querySelector(".js-button2")
