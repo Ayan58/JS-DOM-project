@@ -1,0 +1,1 @@
+This repository contains codes related to JavaScript document object model.
