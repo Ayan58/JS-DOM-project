@@ -10,7 +10,13 @@
     <button onclick= "clicked()" class = "js-button">Click</button>
 
     <script>
-
+        function clicked(){
+            if (document.querySelector(".js-button").innerHTML==="Click"){
+                document.querySelector(".js-button").innerHTML="Clicked"
+            }else{
+                document.querySelector(".js-button").innerHTML="Click"
+            }
+        }
     </script>
 </body>
 </html>
